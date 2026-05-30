@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, sans-serif;
+    background: #f0f2f5;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 560px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+    color: #1a1a2e;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+h2 {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* ── FILE DROP ── */
+.file-drop {
+    border: 2px dashed #cbd5e1;
+    border-radius: 8px;
+    padding: 32px;
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 16px;
+    transition: border-color 0.2s;
+}
+
+.file-drop.drag-over {
+    border-color: #6366f1;
+    background: #f5f3ff;
+}
+
+.file-name {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #6366f1;
+    font-weight: 500;
+    word-break: break-all;
+}
+
+/* ── BUTTONS ── */
+.btn {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: #333;
+    transition: all 0.15s;
+}
+
+.btn:hover {
+    background: #f8fafc;
+}
+
+.btn-primary {
+    background: #6366f1;
+    color: white;
+    border-color: #6366f1;
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background: #4f46e5;
+}
+
+.btn-primary:disabled {
+    background: #a5b4fc;
+    border-color: #a5b4fc;
+    cursor: not-allowed;
+}
+
+.btn-small {
+    padding: 4px 12px;
+    font-size: 0.8rem;
+}
+
+/* ── SHARE RESULT ── */
+.share-result {
+    margin-top: 20px;
+}
+
+.share-result p {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.share-link-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin-bottom: 12px;
+}
+
+.share-link-box span {
+    flex: 1;
+    font-size: 0.85rem;
+    word-break: break-all;
+    color: #6366f1;
+}
+
+/* ── DIVIDER ── */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    color: #94a3b8;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 44%;
+    height: 1px;
+    background: #e2e8f0;
+}
+
+.divider::before { left: 0; }
+.divider::after  { right: 0; }
+
+/* ── LEECHER INPUT ── */
+.input-row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.input-row input:focus {
+    border-color: #6366f1;
+}
+
+.input-row .btn-primary {
+    width: auto;
+    white-space: nowrap;
+}
+
+/* ── PROGRESS BAR ── */
+.download-status {
+    margin-top: 8px;
+}
+
+.progress-bar-container {
+    background: #e2e8f0;
+    border-radius: 999px;
+    height: 10px;
+    overflow: hidden;
+    margin: 10px 0 6px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: #6366f1;
+    border-radius: 999px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#progress-text {
+    font-size: 0.85rem;
+    color: #64748b;
+    text-align: right;
+}
+
+#file-info {
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+}
+
+.peers-info {
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+.hidden {
+    display: none;
+}

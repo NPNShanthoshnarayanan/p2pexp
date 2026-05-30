@@ -1,0 +1,11 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+
+# Debug screenshots
+server/img*.png
+
+# Environment
+.env
