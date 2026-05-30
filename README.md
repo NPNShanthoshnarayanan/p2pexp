@@ -6,13 +6,19 @@ A browser-based peer-to-peer file sharing app inspired by BitTorrent. Files are 
 
 ## The Simple Analogy
 
-> Imagine you want to share a pizza recipe with your friend.
-> You call a **reception desk** (server) and say *"I have a recipe, give me a room number"*.
-> Your friend calls the same desk and says *"I want room 429"*.
-> The desk introduces you two — then **steps aside**.
-> From that point, you talk directly with your friend. The desk is out of the loop.
+> Imagine you missed school and need notes from your classmates.
+> You ask the **class monitor** (server) — *"who has the notes?"*
+> Monitor says — *"John and Sarah have them"*
+> You go directly to John and Sarah. John gives you pages 1–5, Sarah gives you pages 6–10. You collect from both at the same time.
+> The monitor carried nothing — just told you where to go.
+> Once you have the notes, the next person who missed school can collect from you too.
 
-That's exactly how this app works — except instead of a recipe, it's any file.
+That's exactly how this app works:
+- **Class monitor** = signaling server (just introduces peers, never touches the file)
+- **Pages** = 256KB chunks the file is split into
+- **John and Sarah** = peers who have parts of the file
+- **You collecting from both simultaneously** = parallel chunk download
+- **You becoming a source** = every leecher becomes a seeder for the next person
 
 ---
 
