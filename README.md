@@ -2,6 +2,8 @@
 
 A browser-based peer-to-peer file sharing app inspired by BitTorrent. Files are transferred **directly between browsers** — the server only helps peers find each other, like a matchmaker.
 
+🔗 **Live demo:** https://p2pexp.onrender.com
+
 ---
 
 ## The Simple Analogy
